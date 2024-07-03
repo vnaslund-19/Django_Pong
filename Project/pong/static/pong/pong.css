@@ -1,0 +1,84 @@
+body {
+    text-align: center;
+    color: darkblue;
+}
+
+#board {
+    background-color: black;
+    border-top: 5px solid turquoise;
+    border-bottom: 5px solid turquoise;
+}
+
+.index-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #222;
+    font-family: sans-serif;
+}
+
+.index-body h1 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    gap: 50px;
+}
+
+.button-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.localPlay-buttons, .aiPlay-buttons, .aiVsAiPlay-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: turquoise;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1E90FF;
+}
+
+.button-column h3 {
+    color: lightgray;
+    margin-bottom: 10px;
+}
+
+.instructions {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    color: black;
+}
+
+.left-instructions {
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
+    color: grey;
+}
+
+.right-instructions {
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    color: grey;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Pong Game</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'pong/pong.css' %}">
+</head>
+<body class="index-body">
+    <h1>Welcome to JS Pong Game</h1>
+    <div class="button-container">
+        <div class="button-column">
+            <h3>Play locally</h3>
+            <div class="localPlay-buttons">
+                <button onclick="window.location.href='{% url 'play_1v1' %}'">Play 1v1</button>
+            </div>
+        </div>
+        <div class="button-column">
+            <h3>Play against AI</h3>
+            <div class="aiPlay-buttons">
+                <button onclick="window.location.href='{% url 'play_AI' %}?difficulty=easy'">Easy</button>
+                <button onclick="window.location.href='{% url 'play_AI' %}?difficulty=medium'">Medium</button>
+                <button onclick="window.location.href='{% url 'play_AI' %}?difficulty=hard'">Hard</button>
+                <button onclick="window.location.href='{% url 'play_AI' %}?difficulty=impossible'">Impossible</button>
+            </div>
+        </div>
+        <div class="button-column">
+            <h3>AI vs AI</h3>
+            <div class="aiVsAiPlay-buttons">
+                <button onclick="window.location.href='{% url 'spectate' %}?difficulty=easy'">Easy</button>
+                <button onclick="window.location.href='{% url 'spectate' %}?difficulty=medium'">Medium</button>
+                <button onclick="window.location.href='{% url 'spectate' %}?difficulty=hard'">Hard</button>
+                <button onclick="window.location.href='{% url 'spectate' %}?difficulty=impossible'">Impossible</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
